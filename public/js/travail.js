@@ -25,7 +25,12 @@ let division = document.querySelector('#division')
 let clear = document.querySelector('#clear')
 
 // CALCULETTE 
+
 let calculette = document.querySelector('#calculette')
+
+// ECRAN
+
+let ecran = document.querySelector('#ecran')
 
 // CLIQUER
 
@@ -33,7 +38,10 @@ calculette.addEventListener('click', (e) => {
     if (e.target.matches('button')) {
         console.log(e.target.textContent);
     }
-    
+})
+
+calculette.addEventListener('click', (e) => {
+    ecran.innerText = e.target.innerText
 })
 
 

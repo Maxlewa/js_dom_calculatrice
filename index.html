@@ -13,74 +13,75 @@
         <div class="py-3">
             <!-- ECRAN -->
             <div class="row my-4">
-                <div class="col-12 d-flex justify-content-center">
-                    <input class="py-4" type="text" id="ecran">
+                <div class="col-12 d-flex justify-content-center py-4" id="ecran">
+                    <p></p>
+                    <!-- <input class="py-4" type="text" id="ecran"> -->
                 </div>
             </div>
             <!-- RANGEE 987 -->
             <div class="row my-4">
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="neuf">9</button>
+                    <button class="chiffre" id="neuf" value="9">9</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="huit">8</button>
+                    <button class="chiffre" id="huit" value="8">8</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="sept">7</button>
+                    <button class="chiffre" id="sept" value="7">7</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="operation">+</button>
+                    <button class="operation" id="plus" data-action="add">+</button>
                 </div>
             </div>
             <!-- RANGEE 654 -->
             <div class="row my-4">
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="six">6</button>
+                    <button class="chiffre" id="six" value="6">6</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="cinq">5</button>
+                    <button class="chiffre" id="cinq" value="5">5</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="quatre">4</button>
+                    <button class="chiffre" id="quatre" value="4">4</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="operation">-</button>
+                    <button class="operation" id="moins" data-action="subtract">-</button>
                 </div>
             </div>
             <!-- RANGEE 321 -->
             <div class="row my-4">
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="trois">3</button>
+                    <button class="chiffre" id="trois" value="3">3</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="deux">2</button>
+                    <button class="chiffre" id="deux" value="2">2</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre" id="un">1</button>
+                    <button class="chiffre" id="un" value="1">1</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="operation">*</button>
+                    <button class="operation" id="fois" data-action="multiply">*</button>
                 </div>
             </div>
             <!-- RANGEE CLEAR -->
             <div class="row my-4">
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre">C</button>
+                    <button class="chiffre" id="clear" data-action="clear">C</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre">0</button>
+                    <button class="chiffre" id="zero" value="0">0</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="chiffre">.</button>
+                    <button class="chiffre" value=".">.</button>
                 </div>
                 <div class="col-3 d-flex justify-content-center">
-                    <button class="operation">/</button>
+                    <button class="operation" id="division" data-action="divide">/</button>
                 </div>
             </div>
             <!-- BOUTON = -->
             <div class="row my-4">
                 <div class="col-12 d-flex justify-content-center" id="divegal">
-                    <button class="py-4" id="egal">=</button>
+                    <button class="py-4" id="egal" data-action="calculate">=</button>
                 </div>
             </div>
         </div>

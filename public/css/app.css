@@ -15818,8 +15818,11 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 #ecran {
-  width: 300px;
+  width: 250px;
+  height: 50px;
   border-radius: 10px;
+  background-color: #ffffff;
+  text-align: right;
 }
 
 .chiffre {

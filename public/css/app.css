@@ -15808,3 +15808,35 @@ a.text-dark:hover, a.text-dark:focus {
     border-color: #dee2e6;
   }
 }
+
+#calculette {
+  background-color: #585858;
+  width: 25%;
+  display: flex;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+#ecran {
+  width: 300px;
+  border-radius: 10px;
+}
+
+.chiffre {
+  background-color: #d11717;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.operation {
+  background-color: #ffffff;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+}
+
+#egal {
+  width: 300px;
+  border-radius: 10px;
+}

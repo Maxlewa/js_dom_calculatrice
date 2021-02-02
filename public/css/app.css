@@ -15810,7 +15810,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 #calculette {
-  background-color: #585858;
+  background-color: #918f8f;
   width: 25%;
   display: flex;
   justify-content: center;
@@ -15823,11 +15823,11 @@ a.text-dark:hover, a.text-dark:focus {
   border-radius: 10px;
   background-color: #ffffff;
   display: flex;
-  flex-direction: row;
+  justify-content: flex-end;
 }
 
 .chiffre {
-  background-color: #d11717;
+  background-color: #ec5a5a;
   width: 50px;
   height: 50px;
   border-radius: 10px;

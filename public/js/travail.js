@@ -32,17 +32,26 @@ let calculette = document.querySelector('#calculette')
 
 let ecran = document.querySelector('#ecran')
 
-// CLIQUER
-
-// calculette.addEventListener('click', (e) => {
-//     if (e.target.matches('button')) {
-//         console.log(e.target.textContent);
-//     }
-// })
-
-// calculette.addEventListener('click', (e) => {
-//     ecran.innerText = e.target.innerText
-// })
+let calculer = (n1, operator, n2) => {
+    let result = ''
+    if (operator === "add") {
+        result = parseFloat(n1) + parseFloat(n2)
+    } else if (operator === "subtract") {
+        result  = parseFloat(n1) - parseFloat(n2)
+    } else if (operator === "multiply") {
+        result  = parseFloat(n1) * parseFloat(n2)
+    } else if (operator === "divide") {
+        result  = parseFloat(n1) % parseFloat(n2)
+    }
+    if (result == '69') {
+        calculette.setAttribute('style', 'background-color: black;')
+    } else if (result == '666') {
+        calculette.setAttribute('style', 'background-color: red;')
+    } else if (result == '420') {
+        calculette.setAttribute('style', 'background-color: green;')
+    }
+    return result
+}
 
 calculette.addEventListener('click', (e) => {
     let key = e.target
@@ -50,16 +59,26 @@ calculette.addEventListener('click', (e) => {
     let displayedNum = ecran.textContent
     if (key.matches('button')) {
         if (key.value === 'add' || key.value === 'subtract' || key.value === 'multiply' || key.value === 'divide') {
-            console.log(key.value);
+            calculette.dataset.previous = 'monoperateur'
+            calculette.dataset.firstValue = displayedNum
+            calculette.dataset.operator = key.value
         } else if (key.value === 'calculate') {
-            console.log(key.value);
+            let firstValue = calculette.dataset.firstValue
+            let operator = calculette.dataset.operator
+            let secondValue = displayedNum
+            ecran.innerText = calculer (firstValue, operator, secondValue)
         } else if (key.value === 'clear') {
-            console.log(key.value);
+            ecran.innerText = 0
+            calculette.removeAttribute('data-first-value')
+            calculette.removeAttribute('data-operator')
+        } else if (key.value === 'virgule') {
+            ecran.textContent = displayedNum + '.'
         } else {
-            if (displayedNum === '0') {
-                ecranP.textContent = keyContent
+            if (displayedNum === '0' || calculette.dataset.previous === 'monoperateur') {
+                ecran.textContent = keyContent
+                calculette.removeAttribute('data-previous')
             } else {
-                ecranP.textContent = displayedNum + keyContent
+                ecran.textContent = displayedNum + keyContent
             }
         }
     }
